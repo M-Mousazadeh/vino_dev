@@ -62,8 +62,8 @@ exports.sendLink = async(req, res)=>{
         secure : false,
         service : 'gmail',
         auth : {
-            user: 'vinodevs.official@gmail.com',
-            pass : 'gkffvakjzmuhzhwg'
+            user: process.env.SMTP_User,
+            pass : process.env.SMTP_Pass
         }
     });
 
