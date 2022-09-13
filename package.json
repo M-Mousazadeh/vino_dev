@@ -1,0 +1,31 @@
+{
+  "name": "vino",
+  "version": "1.0.0",
+  "description": "Development team website",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js"
+  },
+  "keywords": [],
+  "author": "vino team",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "bootstrap-v4-rtl": "^4.6.0-3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "font-awesome": "^4.7.0",
+    "mongoose": "^6.5.4",
+    "nodemailer": "^6.7.8",
+    "uuid": "^9.0.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

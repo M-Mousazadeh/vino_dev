@@ -1,0 +1,426 @@
+body,
+.mn-head .nav-link,
+.sec-new-add h1,
+.what-project-div h1,
+.testimonal-sec h1,
+.sec-project-div h1,
+.sec-d4 h1,
+.news-sec-div h1,
+.sec-d1 h1 {
+  font-family: Vazirmatn FD, "Open Sans", sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.comon-services h5,
+.comon-services h6,
+.read-more,
+.why-choose-block ul li,
+.trust-choose-block ul li,
+.skill-name,
+.skill-status,
+.signiup,
+.banner-div-content h1,
+.consult-bn,
+.banner-text h1,
+.comon-severice-dl ul li,
+.project-menu ul li,
+.text-c,
+.our-mmison ul li,
+.our-gols ul li {
+  font-family: Vazirmatn FD, "Poppins", sans-serif;
+}
+.navbar-nav .dropdown-item{
+    text-align: right;
+}
+.navbar-nav .dropdown-item:hover {
+  background-image: linear-gradient(to left, #370695, #b8189c);
+}
+.dropdown-menu1:before {
+  right: 20px;
+  left: unset;
+}
+.modal-header .btn-close {
+    margin: -.5rem auto -.5rem -.5rem;
+}
+.team-block .owl-prev {
+  right: -10px;
+  left: unset;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+.team-block .owl-next {
+  left: -40px;
+  right: unset;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+.why-choose-block ul li i,
+.trust-choose-block ul li i {
+  margin-left: 5px;
+  margin-right: unset;
+}
+.skill-name {
+  float: right;
+}
+.skill-status {
+  float: left;
+}
+.cont-para li i {
+  margin-left: 5px;
+  margin-right: unset;
+}
+
+.comon-pic-news p {
+  right: 15px;
+  left: unset;
+}
+
+.dtails-idv-text li:first-child {
+  margin-right: 0;
+  margin-left: unset;
+}
+.silder-div-text h4 {
+  margin-right: 10px;
+  margin-left: unset;
+}
+.silder-div-text .item .comon-div-ts:before {
+  right: 15px;
+  left: unset;
+  transform: rotateY(180deg);
+}
+.our-work-details i {
+  margin-left: 15px;
+  margin-right: unset;
+}
+.silder-div-text .item .comon-div-ts:after {
+  right: 0;
+  left: unset;
+}
+.cart {
+  margin-right: 10px;
+  margin-left: unset;
+}
+.cart small {
+  left: 10px;
+  right: unset;
+}
+.top-bar-sec .row > div:nth-child(2) {
+  justify-content: flex-start;
+}
+
+.banner-div-content {
+  animation: fadeInright 0.5s ease-in-out;
+  text-align: right;
+}
+.consult-bn {
+  margin-left: 8px;
+  margin-right: unset;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  right: 0;
+  left: unset;
+}
+.pic-2 {
+  left: 0;
+  right: unset;
+}
+.sec-d1 h4 {
+  padding-right: 40px;
+  padding-left: unset;
+}
+.sec-d1 h4:before {
+  right: 0;
+  left: unset;
+}
+.comon-hed {
+  padding-right: 40px;
+  padding-left: unset;
+}
+.comon-hed:before {
+  right: 0;
+  left: unset;
+}
+.sec-new-add i {
+  margin-left: 15px;
+  margin-right: unset;
+}
+.sec-new-add .row > div:nth-child(3) .comon-st-div {
+  justify-content: flex-start;
+}
+.sec-new-add .row > div:nth-child(4) .comon-st-div {
+  justify-content: flex-start;
+}
+.what-project-div .comon-hed {
+  justify-content: right;
+}
+.what-project-div h4,
+.what-project-div p {
+  color: #fff;
+  text-align: right;
+}
+.what-project-div ul li i {
+  margin-left: 10px;
+  margin-right: unset;
+}
+.visit-bn {
+  margin-right: 20px;
+  margin-left: unset;
+}
+.from-sec-div .comon-sec:after {
+  left: 0;
+  right: unset;
+}
+
+.comon-items .icon-fs:after {
+  right: 7px;
+  left: unset;
+}
+.off-text {
+  right: 10px;
+  left: unset;
+}
+.comon-text-sec h5,
+.comon-text-sec p {
+  padding-right: 25px;
+  padding-left: unset;
+}
+.comon-text-sec a {
+  margin-right: 25px;
+  margin-left: unset;
+}
+.sec-d7 > row > div:nth-child(2) {
+  margin-left: auto;
+  margin-right: unset;
+}
+.subcribe-bn {
+    border-radius: 5px 0 0 5px;
+}
+.subcribe-bn:hover {
+    color: #f670ff;
+}
+.about-svg {
+    transform: rotateY(180deg);
+}
+.socal {
+  justify-content: end;
+}
+.comon-footer ul {
+  padding: 3px 18px 0 0px;
+}
+.comon-footer .list-unstyled {
+  padding-right: 0;
+  padding-left: unset;
+  float: right;
+}
+.sec-d8 figure > img {
+  margin-right: auto;
+  margin-left: unset;
+}
+.range-slider {
+  text-align: right;
+}
+.range-slider input[type="range"] {
+  right: 0;
+  left: unset;
+}
+.owl-prev:after {
+  right: 0;
+  left: 81px;
+}
+.subpage-banner ul li:after {
+  left: -18px;
+  right: unset;
+  content: "\f104";
+}
+
+.comon-career-bl ul li span {
+  margin-left: 8px;
+  margin-right: unset;
+}
+.text-c {
+  margin-right: 15px;
+  margin-left: unset;
+}
+.comon-career-bl ul li:first-child {
+  margin-right: 0;
+  margin-left: unset;
+}
+.pricing-card {
+  box-shadow: -5px 7px 15px 2px rgb(82 90 101 / 12%);
+}
+.pricing-card .popular {
+  left: 5%;
+  right: unset;
+}
+.pricing-card .pricing-header .price-circle {
+  right: calc(50% - 60px);
+  left: unset;
+}
+.pricing-card .buy-button-box {
+  float: right;
+}
+.pricing-card .buy-button-box .buy-now {
+  background-image: linear-gradient(to right, #a55eea, #45aaf2);
+}
+.recent-post-div figure {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.about-mn-pic figure:last-child {
+  right: -20px;
+  left: unset;
+}
+.our-mmison ul li i,
+.our-gols ul li i {
+  margin-left: 5px;
+  margin-right: unset;
+}
+
+@media (max-width: 812px) {
+  .comon-text-sec h5,
+  .comon-text-sec p {
+    padding-right: 0;
+    padding-left: unset;
+  }
+  .comon-text-sec a {
+    margin-right: 0;
+    margin-left: unset;
+  }
+
+  footer .row > div:nth-child(2) {
+    justify-content: right;
+  }
+  footer .row > div:nth-child(3) .comon-footer,
+  footer .row > div:nth-child(4) .comon-footer {
+    justify-content: right;
+  }
+  .socal {
+    justify-content: end;
+  }
+}
+@media (max-width: 768px) {
+  .comon-text-sec h5,
+  .comon-text-sec p {
+    padding-right: 0;
+    padding-left: unset;
+  }
+  .comon-text-sec a {
+    margin-right: 0;
+    margin-left: unset;
+  }
+  footer .row > div:nth-child(2) {
+    justify-content: right;
+  }
+  footer .row > div:nth-child(3) .comon-footer,
+  footer .row > div:nth-child(4) .comon-footer {
+    justify-content: right;
+  }
+  .socal {
+    justify-content: end;
+  }
+}
+@media (max-width: 668px) {
+  .team-block .owl-next {
+    left: 0px;
+    right: unset;
+  }
+  .team-block .owl-prev {
+    right: 30px;
+    left: unset;
+  }
+  .comon-text-sec h5,
+  .comon-text-sec p {
+    padding-right: 0;
+    padding-left: unset;
+  }
+  .comon-text-sec a {
+    margin-right: 0;
+    margin-left: unset;
+  }
+  footer .row > div:nth-child(2) {
+    justify-content: right;
+  }
+  footer .row > div:nth-child(3) .comon-footer,
+  footer .row > div:nth-child(4) .comon-footer {
+    justify-content: right;
+  }
+  .socal {
+    justify-content: end;
+  }
+}
+@media (max-width: 480px) {
+  .comon-text-sec h5,
+  .comon-text-sec p {
+    padding-right: 0;
+    padding-left: unset;
+  }
+  .comon-text-sec a {
+    margin-right: 0;
+    margin-left: unset;
+  }
+  footer .row > div:nth-child(2) {
+    justify-content: right;
+  }
+  .socal {
+    justify-content: end;
+  }
+  .about-mn-pic figure:last-child {
+    right: 0;
+    left: 0;
+  }
+  .cart {
+    margin-right: 0;
+    margin-left: unset;
+  }
+  footer .row > div:nth-child(3) .comon-footer,
+  footer .row > div:nth-child(4) .comon-footer,
+  footer .row > div:nth-child(5) .comon-footer {
+    justify-content: flex-start;
+  }
+}
+.subcribe-div .form-control {
+    border-radius: 0 5px 5px 0;
+}
+.comon-career-bl {
+  box-shadow: -5px 7px 15px 2px rgb(82 90 101 / 12%);
+}
+.conatct-form-div {
+  box-shadow: -5px 7px 15px 2px rgb(82 90 101 / 12%);
+}
+.comon-services {
+  box-shadow: -5px 7px 15px 2px rgb(82 90 101 / 12%);
+}
+.our-work-svg ,.our-work-bg1{
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+.about-svg-bt {
+  transform: rotateY(180deg);
+}
+
+.call-svg {
+    transform: rotateY(180deg);
+}
+@media (max-width: 812px)
+{.menu-mobile .offcanvas-body .nav-link {
+    padding-right: 10px;
+    padding-left: unset;
+}}

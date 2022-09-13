@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= pageTitle  %> </title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+    <link href="/css/all.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <% if(path === '/login' || path === '/register'){ %>
+      <link href="/css/login.css" rel="stylesheet">
+    <% } %>  
+    
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="/fonts/vazir/Farsi-Digits/Vazirmatn-FD-font-face.css">
+    <link rel="stylesheet" href="/css/rtl.css">
+  </head>
+
+<body>
+  <% if(path !== '/404'){ %>
+    <%- include('../includes/loading.ejs') %> 
+  <% } %>  
+  <!-- comon header  -->
+  <% if(path !== '/404' && path !== '/login' && path !== '/register'){ %> 
+  <%- include('../includes/header.ejs')  %> 
+  <% } %> 
+  <!-- comon header ends  -->
+  <% if(path !== '/' && path !== '/404' && path !== '/login' && path !== '/register'){ %>
+    <%- include('../includes/banner.ejs')  %> 
+  <% } %>  
+  <%- body %>
+  
+  <% if(path !== '/404' && path !== '/login' && path !== '/register'){ %> 
+  <%- include('../includes/footer.ejs')  %>
+  <%- include('../includes/modal.ejs')  %>
+  <%- include('../includes/responsive.ejs')  %>
+  <% } %> 
+  <script src="/js/custom/loader.js"></script>
+  <script src="js/bootstrap.bundle.min.js" ></script>
+  <script src="js/jquery.min.js" ></script>
+  <!-- Owl Carousel -->
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/mixitup.min.js" ></script>
+  <script>
+     var mixer = mixitup('.gallery');
+  </script>
+  <script src="js/custom.js"></script>
+  
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="/js/custom/AOS.js"></script>
+</body>
+</html>

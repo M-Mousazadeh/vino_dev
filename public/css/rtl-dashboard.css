@@ -1,0 +1,301 @@
+/*=== Vazir Font ===*/
+@font-face {
+    font-family: 'Vazir';
+    src: url('/fonts/vazir/Vazir-Black.eot');
+    src: url('/fonts/vazir/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/vazir/Vazir-Black.woff2') format('woff2'),
+        url('/fonts/vazir/Vazir-Black.woff') format('woff'),
+        url('/fonts/vazir/Vazir-Black.ttf') format('truetype'),
+        url('/fonts/vazir/Vazir-Black.svg#Vazir-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('/fonts/vazir/Vazir-Thin.eot');
+    src: url('/fonts/vazir/Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/vazir/Vazir-Thin.woff2') format('woff2'),
+        url('/fonts/vazir/Vazir-Thin.woff') format('woff'),
+        url('/fonts/vazir/Vazir-Thin.ttf') format('truetype'),
+        url('/fonts/vazir/Vazir-Thin.svg#Vazir-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('/fonts/vazir/Vazir-Light.eot');
+    src: url('/fonts/vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/vazir/Vazir-Light.woff2') format('woff2'),
+        url('/fonts/vazir/Vazir-Light.woff') format('woff'),
+        url('/fonts/vazir/Vazir-Light.ttf') format('truetype'),
+        url('/fonts/vazir/Vazir-Light.svg#Vazir-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('/fonts/vazir/Vazir-Medium.eot');
+    src: url('/fonts/vazir/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/vazir/Vazir-Medium.woff2') format('woff2'),
+        url('/fonts/vazir/Vazir-Medium.woff') format('woff'),
+        url('/fonts/vazir/Vazir-Medium.ttf') format('truetype'),
+        url('/fonts/vazir/Vazir-Medium.svg#Vazir-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('/fonts/vazir/Vazir-Bold.eot');
+    src: url('/fonts/vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/vazir/Vazir-Bold.woff2') format('woff2'),
+        url('/fonts/vazir/Vazir-Bold.woff') format('woff'),
+        url('/fonts/vazir/Vazir-Bold.ttf') format('truetype'),
+        url('/fonts/vazir/Vazir-Bold.svg#Vazir-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('/fonts/vazir/Vazir-Regular.eot');
+    src: url('/fonts/vazir/Vazir-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/vazir/Vazir-Regular.woff2') format('woff2'),
+        url('/fonts/vazir/Vazir-Regular.woff') format('woff'),
+        url('/fonts/vazir/Vazir-Regular.ttf') format('truetype'),
+        url('/fonts/vazir/Vazir-Regular.svg#Vazir-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*=== /Vazir Font ===*/
+
+html, body {
+    font-family: 'Vazir';
+    text-align: right;
+}
+
+body * {
+    direction: rtl;
+}
+
+.table thead th {
+    letter-spacing: normal;
+}
+
+.navbar-brand {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.navbar-vertical .navbar-brand {
+    margin-left: 0;
+}
+
+.navbar-vertical .navbar-brand {
+    text-align: center;
+}
+
+.sidenav-toggler-light .sidenav-toggler-line
+{
+    background-color: #000;
+}
+
+.sidenav-mw {
+    max-width: 70px !important;
+    padding-top: 2.1rem;
+}
+
+.navbar-nav {
+    padding-right: 0;
+}
+
+.navbar-horizontal .navbar-collapse .collapse-close {
+    text-align: left;
+}
+
+.navbar-vertical.navbar-expand-xs.fixed-right + .main-content {
+    margin-right: 250px;
+}
+
+@media (max-width: 1199.98px)
+{
+    .sidenav
+    {
+        transform: translateX(250px);
+        -webkit-transform: translateX(250px);
+        -moz-transform: translateX(250px);
+        -ms-transform: translateX(250px);
+        -o-transform: translateX(250px);
+    }
+
+    .navbar-vertical.navbar-expand-xs.fixed-right + .main-content {
+        margin-right: 0;
+    }
+}
+
+.scroll-wrapper > .scroll-content {
+    direction: ltr;
+    margin-right: -17px !important;
+    margin-left: 0 !important;
+}
+
+.scrollbar-inner .scroll-element.scroll-y {
+    right: auto;
+    left: 0;
+}
+
+.scrollbar-inner .scroll-element {
+    margin-right: 0;
+    margin-left: 2px;
+}
+
+.navbar-search .input-group .input-group-text {
+    padding-right: 16px;
+}
+
+.navbar-search .input-group .form-control {
+    padding-right: 0;
+    padding-left: 12px;
+}
+
+.g-navbar-search-show .navbar-search .close {
+    right: auto;
+    left: 0;
+}
+
+.shortcut-item {
+    margin-top: 20px;
+}
+
+.dropdown-menu .dropdown-item > i,
+.dropdown-menu .dropdown-item > svg
+{
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item
+{
+    padding-right: .5rem;
+    padding-left: 0;
+}
+.breadcrumb-item + .breadcrumb-item::before
+{
+    padding-left: .5rem;
+    padding-right: 0;
+}
+
+.btn-icon-clipboard span {
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+.card-profile-stats > div {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+.card-profile-stats > div:last-child {
+    margin-left: 0;
+}
+
+.avatar-group {
+    direction: ltr;
+}
+
+.btn-icon .btn-inner--text:not(:first-child)
+{
+    margin-right: .75em;
+    margin-left: 0;
+}
+
+.btn-icon .btn-inner--text:not(:last-child)
+{
+    margin-left: .75em;
+    margin-right: 0;
+}
+
+.input-group > .form-control + .form-control,
+.input-group > .form-control + .custom-select,
+.input-group > .form-control + .custom-file,
+.input-group > .form-control-plaintext + .form-control,
+.input-group > .form-control-plaintext + .custom-select,
+.input-group > .form-control-plaintext + .custom-file,
+.input-group > .custom-select + .form-control,
+.input-group > .custom-select + .custom-select,
+.input-group > .custom-select + .custom-file,
+.input-group > .custom-file + .form-control,
+.input-group > .custom-file + .custom-select,
+.input-group > .custom-file + .custom-file
+{
+    margin-right: -1px;
+    margin-left: 0;
+}
+
+.input-group-prepend .btn + .btn,
+.input-group-prepend .btn + .input-group-text,
+.input-group-prepend .input-group-text + .input-group-text,
+.input-group-prepend .input-group-text + .btn,
+.input-group-append .btn + .btn,
+.input-group-append .btn + .input-group-text,
+.input-group-append .input-group-text + .input-group-text,
+.input-group-append .input-group-text + .btn
+{
+    margin-right: -1px;
+    margin-left: 0;
+}
+
+.input-group-lg > .custom-select,
+.input-group-sm > .custom-select
+{
+    padding-left: 1.75rem;
+    padding-right: 0;
+}
+
+.btn-group .btn,
+.input-group .btn
+{
+    margin-left: 0;
+    margin-right: unset;
+}
+
+.input-group-flush > .input-group-prepend > .input-group-text,
+.input-group-flush > .input-group-append > .input-group-text
+{
+    padding: 0;
+    padding-left: 1rem;
+    margin-right: 0;
+}
+
+.custom-control {
+    padding-right: 1.75rem;
+    padding-left: 0;
+}
+
+.custom-control-input {
+    left: auto;
+    right: 0;
+}
+
+.custom-control-label::before {
+    right: -1.75rem;
+    left: auto;
+}
+
+.custom-control-label::after {
+    right: -1.75rem;
+    left: auto;
+}
+
+.direction-ltr {
+    direction: ltr;
+}

@@ -1,0 +1,126 @@
+<div class="modal fade cv-up" id="jobModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">درخواست همکاری</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <div class="cv-upload-div">
+               <div class="form-group">
+                   <input type="text" class="form-control" placeholder="نام خود را وارد کنید"/>
+               </div>
+               <div class="form-group">
+                <input type="email" class="form-control" placeholder="ایمیل خود را وارد کنید"/>
+               </div>
+               <div class="form-group">
+                <input type="text" class="form-control" placeholder="شماره تلفن خود را وارد کنید"/>
+               </div>
+               <div class="form-group">
+                 <select class="form-select" aria-label="فرصت های شغلی">
+                    <option selected>فرصت های شغلی</option>
+                    <option value="1">فرصت شغلی 1</option>
+                    <option value="2">فرصت شغلی 2</option>
+                    <option value="3">فرصت شغلی 3</option>
+                  </select>
+               </div>
+               <div class="form-group">
+                <select class="form-select" aria-label=تجربه کاری">
+                   <option selected>تجربه کاری شما</option>
+                   <option value="1">تازه کار</option>
+                   <option value="1">1 سال</option>
+                   <option value="2">2 سال</option>
+                   <option value="3">3 سال</option>
+                 </select>
+                </div>
+                <div class="form-group">
+                    <label for="formFile" class="form-label">آپلود رزومه</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+           </div>
+        </div>
+        <div class="modal-footer">
+         
+          <button type="button" class="btn btn-primary job-ap">ارسال درخواست همکاری</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- quick Modal -->
+  <div class="modal fade quick-contact" id="quickModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تماس با پشتیبانی </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <div class="quick-form-div">
+              <div class="form-group">
+                 <input type="text" class="form-control" placeholder="نام خود را وارد کنید" />
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="ایمیل خود را وارد کنید" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="موضوع پیام خود را وارد کنید" />
+              </div>
+              <div class="form-group">
+                 <textarea class="form-control" placeholder="متن پیام خود را وارد کنید"></textarea>
+              </div>
+              
+           </div>
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" class="btn subimt-comment">ارسال پیام</button>
+        </div>
+      </div>
+    </div>
+  </div>    
+  
+  
+  <!-- menu mobile -->
+  <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="offcanvasmenu" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+         <img src="images/logo-sc.png" alt="logo"/>
+      </h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+       
+      <ul class="navbar-nav me-auto mb-2 mt-lg-0 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">خانه</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">درباره ما</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="/projects"> پروژه ها</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pricing">قیمت ها</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">بلاگ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/career">کسب و کار</a>
+        </li>
+        
+         <li class="nav-item">
+          <a class="nav-link" href="/contact">تماس با ما</a>
+        </li>
+         
+        <li class="nav-item">
+          <a class="signiup" data-bs-toggle="modal" data-bs-target="#quickModal" >
+             تماس با پشتیبانی
+          </a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
