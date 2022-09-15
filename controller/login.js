@@ -20,8 +20,10 @@ exports.login = (req, res)=>{
 }
 
 exports.createUser = async(req, res)=>{
-    const {email, password} = req.body
+    const errors = [];
     try {
+        await model.userValidation(req.body)
+        const {email, password} = req.body
         const hash = await bcrypt.hash(password, 10);
         console.log(hash);
         await model.create({
@@ -29,20 +31,17 @@ exports.createUser = async(req, res)=>{
             password : hash
         })
         res.redirect('/account/login')
-        // bcrypt.genSalt(10, (err, salt)=>{
-        //     if(err) throw err
-
-        //     bcrypt.hash(password, salt, async(err, hash)=>{
-        //         if(err) throw err;
-        //         await model.create({
-        //             email,
-        //             password : hash
-        //         })
-        //         res.redirect('/account/login')
-        //     })
-        // })
-    } catch (err) {
-        console.log(err);        
+    } catch (errs) {
+        errs.inner.forEach(err=>{
+            errors.push({name : err.path, message : err.message})
+        })
+        res.render('register',{
+            pageTitle : 'وینو تیم | ثبت نام',
+            path : '/register',
+            text : '',
+            errors
+        })
+        console.log(errs);
     }
     
 }

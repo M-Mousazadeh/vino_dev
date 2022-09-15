@@ -1,0 +1,10 @@
+<% if(typeof errors !== 'undefined'){ %>
+    <% errors.forEach(err => { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= err.message  %>
+            <button style="background-color: rgb(0, 0, 0, 0); border: none; font-size: 20px; float: left;" onclick="this.parentElement.style.display = 'none';" type="button" class="close" data-dismiss="alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </button> 
+        </div>
+    <% }) %>
+<% } %> 
