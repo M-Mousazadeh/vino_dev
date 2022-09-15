@@ -7,7 +7,7 @@ exports.register = (req, res)=>{
     res.render('register', {
         pageTitle : 'وینو تیم | ثبت نام',
         path : '/register',
-        text : ''
+        text : '',
     })
 }
 
@@ -15,7 +15,8 @@ exports.login = (req, res)=>{
     res.render('login', {
         pageTitle : 'وینو تیم | ورود ',
         path : '/login',
-        text : ''
+        text : '',
+        message : req.flash('success_msg')
     })
 }
 
@@ -24,12 +25,23 @@ exports.createUser = async(req, res)=>{
     try {
         await model.userValidation(req.body)
         const {email, password} = req.body
+        const user = await model.findOne({email});
+        console.log(user);
+        if(user){
+            errors.push({message : 'کاربری با این ایمیل موجود است'});
+            return res.render('register',{
+                    pageTitle : 'وینو تیم | ثبت نام',
+                    path : '/register',
+                    text : '',
+                    errors
+                })
+        }
         const hash = await bcrypt.hash(password, 10);
-        console.log(hash);
         await model.create({
             email,
             password : hash
         })
+        req.flash('success_msg','ثبت نام موفقیت آمیز بود')
         res.redirect('/account/login')
     } catch (errs) {
         errs.inner.forEach(err=>{

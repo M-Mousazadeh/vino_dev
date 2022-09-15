@@ -18,7 +18,6 @@ exports.schema = yup.object().shape({
     .max(255, "حداکثر طول کلمه عبور حداکثر 255 کاراکتر است"),
   confirmPassword: yup
     .string()
-    .required("تکرار کلمه عبور الزامی میباشد")
     .oneOf(
       [yup.ref("password"), null],
       "تکرار کلمه عبورf با کلمه عبور یکسان نمیباشد"

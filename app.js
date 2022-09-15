@@ -1,8 +1,10 @@
 const express = require('express');
 const dotEnv = require('dotenv');
 const expressLayout = require('express-ejs-layouts');
+const flash = require('connect-flash');
+const session = require('express-session');
 
-const satics = require('./utils/static');
+const satics = require('./utils/static')
 const connectDB = require('./config/db');
 
 //* env file
@@ -12,6 +14,19 @@ const app = express();
 
 //* BodyParser
 app.use(express.urlencoded({extended : false}));
+
+//* Express session
+app.use(session({
+    secret : 'secret',
+    cookie : {
+        maxAge : 60000
+    },
+    resave : false,
+    saveUninitialized : false
+}))
+
+//* Flash
+app.use(flash())
 
 //* Template engine set up
 app.use(expressLayout);
