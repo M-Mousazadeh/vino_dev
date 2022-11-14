@@ -1,7 +1,7 @@
 exports.index = (req, res)=>{
     res.render('projects',{
-            pageTitle : 'وینو تیم | پروژه ها',
+            pageTitle : 'وینو تیم | نمونه کار ها',
             path : '/p',
-            text : "پروژه ها",
+            text : "نمونه کار ها",
     })
 }
