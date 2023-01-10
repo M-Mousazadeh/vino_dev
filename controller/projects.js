@@ -3,5 +3,6 @@ exports.index = (req, res)=>{
             pageTitle : 'وینو تیم | نمونه کار ها',
             path : '/p',
             text : "نمونه کار ها",
+            session : req.session.user
     })
 }

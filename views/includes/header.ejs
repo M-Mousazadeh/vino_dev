@@ -32,10 +32,16 @@
                          <a class="nav-link" href="/contact">تماس با ما</a>
                        </li>
                         
-                       <li class="nav-item">
+                       <li class="nav-item">                        
+                        <% if(!session){%> 
                         <a href="/account/register" class="signiup">
                            ورود / ثبت نام
                         </a>
+                        <% }else{ %> 
+                          <a href="/account/profile" class="signiup">
+                            پروفایل
+                         </a>
+                          <% } %> 
                       </li>
                       <!-- <li class="nav-item">
                         <a href="/account/login" class="signedup">

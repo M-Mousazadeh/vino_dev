@@ -3,6 +3,7 @@ const dotEnv = require('dotenv');
 const expressLayout = require('express-ejs-layouts');
 const flash = require('connect-flash');
 const session = require('express-session');
+const cookieParser = require('cookie-parser')
 
 const satics = require('./utils/static')
 const connectDB = require('./config/db');
@@ -19,7 +20,8 @@ app.use(express.urlencoded({extended : false}));
 app.use(session({
     secret : 'secret',
     cookie : {
-        maxAge : 60000
+        maxAge : 60000,
+        user : ""
     },
     resave : false,
     saveUninitialized : false
@@ -27,7 +29,7 @@ app.use(session({
 
 //* Flash
 app.use(flash())
-
+app.use(cookieParser());
 //* Template engine set up
 app.use(expressLayout);
 app.set('view engine', 'ejs');
@@ -44,6 +46,7 @@ connectDB();
 
 //*Routes
 app.use(require('./router/index'));
+app.use('/account',require('./router/profile'));
 app.use(require('./router/about'));
 app.use(require('./router/blog'));
 app.use(require('./router/blogDetails'));
