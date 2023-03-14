@@ -1,0 +1,300 @@
+:root {
+    --primary: #bd189b;
+    --secondary: #3b0597;
+}
+
+body {
+    padding: 0;
+}
+
+body>.c-container {
+    /* background-color: wheat; */
+    height: 100vh;
+    display: flex;
+}
+
+.menu {
+    width: 400px;
+    height: 100%;
+    background: rgb(189, 24, 155);
+    background: linear-gradient( 150deg, rgba(189, 24, 155, 1) 0%, rgba(59, 5, 151, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.menu>.profile-image {
+    width: 150px;
+    min-height: 150px;
+    max-height: 200px;
+    background-color: red;
+    overflow: hidden;
+    border-radius: 100px;
+    border: 2px solid white;
+    margin-top: 100px;
+}
+
+.menu>.profile-image>img {
+    height: 100%;
+}
+
+.menu>.username {
+    display: flex;
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.menu>.username>img {
+    width: 0;
+    transition: 0.2s width;
+}
+
+.menu>.username:hover img {
+    width: 15px;
+}
+
+.menu>.username>img {
+    margin-right: 5px;
+}
+
+.menu>.username>img:hover {
+    cursor: pointer;
+}
+
+.menu>.bottom {
+    width: calc(100% - 200px);
+}
+
+.menu>.bottom>.tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu>.bottom>.tabs>.tab {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    position: relative;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.menu>.bottom>.tabs>.tab:hover {
+    cursor: pointer;
+}
+
+.menu>.bottom>.tabs>.tab:hover>.title {
+    color: white;
+}
+
+.menu>.bottom>.tabs>.tab:hover::after {
+    width: 160px;
+}
+
+.menu>.bottom>.tabs>.tab::after {
+    content: "";
+    width: 0px;
+    height: 75px;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    transform: rotate(-20deg);
+    border-radius: 20px;
+    background-color: var(--secondary);
+    z-index: 10px;
+    transition: width 0.4s;
+}
+
+.menu>.bottom>.tabs>.tab[data-focus="true"]::after {
+    width: 160px;
+}
+
+.menu>.bottom>.tabs>.tab[data-focus="true"]>.title {
+    color: white;
+}
+
+.menu>.bottom>.tabs>.tab>img {
+    width: 50px;
+    height: 100%;
+    padding: 10px;
+    margin-right: auto;
+    /* background-color: red; */
+}
+
+.menu>.bottom>.tabs>.tab>.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-size: 14px;
+    z-index: 20;
+    /* background-color: rebeccapurple; */
+    font-family: Shabnam;
+    transition: color 0.4s;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    padding: 100px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.content>.into {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, var(--primary), var(--secondary)) border-box;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    overflow-x: hidden;
+    /* border: ; */
+}
+
+.content>.into>.page {
+    padding: 30px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    transition: left 0.4s;
+}
+
+.content>.into>.setting {
+    text-align: right;
+    padding: 50px 50px;
+}
+
+.content>.into>.focus {
+    left: 0%;
+}
+
+.content>.into>.basket>.into {
+    width: 100%;
+}
+
+.content>.into>.basket>.into>.item {
+    height: 120px;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    box-shadow: 0 0 10px #b7a2db;
+    border-radius: 10px;
+    overflow: hidden;
+    color: var(--secondary);
+    /* border: 1px solid var(--secondary); */
+    transition: transform 0.2s;
+}
+
+.content>.into>.basket>.into>.item:hover {
+    transform: scale(1.005);
+    cursor: pointer;
+}
+
+.content>.into>.basket>.into>.item:not(:first-child) {
+    margin-top: 30px;
+}
+
+.content>.into>.basket>.into>.item>.image {
+    width: 120px;
+    height: 100%;
+    /* margin-left: auto; */
+}
+
+.content>.into>.basket>.into>.item>.image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content>.into>.basket>.into>.item>.left {
+    margin-right: 10px;
+}
+
+.content>.into>.basket>.into>.item>.left>.title {
+    font-size: 1.8em;
+    direction: rtl;
+    /* background-color: red; */
+    padding-left: 10px;
+}
+
+.content>.into>.basket>.into>.item>.left>.description {
+    width: 90%;
+    margin-left: auto;
+    font-size: 1em;
+    direction: rtl;
+    /* background-color: red; */
+    padding-left: 10px;
+    opacity: 0.5;
+    transition: opacity 0.8s;
+}
+
+.content>.into>.basket>.into>.item:hover>.left>.description {
+    opacity: 1;
+}
+
+.content>.into>.basket>.into>.item>.paid {
+    /* width: 130px; */
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 3px;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 20px;
+}
+
+.content>.into>.basket>.into>.item>.unpaid {
+    /* width: 130px; */
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 3px;
+    border: 1px solid rgb(193, 180, 0);
+    background-color: rgb(193, 180, 0);
+    border-radius: 20px;
+}
+
+.content>.into>.basket>.into>.item[data-paid="1"]>.paid {
+    display: flex;
+}
+
+.content>.into>.basket>.into>.item[data-paid="0"]>.unpaid {
+    display: flex;
+}
+
+.content>.into>.logout>.into>.title {
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+.content>.into>.logout>.into>.btns>.btn {
+    width: 150px;
+    margin: 10px !important;
+}

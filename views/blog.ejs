@@ -5,30 +5,33 @@
           <h6 class="text-center cm-sub" data-aos="fade-down"> اخبار و مقالات </h6>
           <h2 class="text-center" data-aos="fade-up"> بلاگ های ما</h2>
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-md-3 gx-lg-4">
-              <div class="col" data-aos="fade-left">
-                <div class="comon-news-part">
-                    <div class="comon-pic-news">
-                        <figure class="position-relative">
-                          <a href="#"> <img src="images/pexels-photo-5673488.jpeg" alt="picb"/> </a>
-                        </figure>
-                        
-                    </div>
-                    <div class="dtails-idv-text">
-                       <ul class="list-unstyled d-flex">
-                          <li>
-                            <a href="#"> <i class="fa fa-user-alt"></i> ناشر </a>
-                          </li>
-                          <li>
-                            <a href="#"> <i class="fas fa-calendar-week"></i> 20 خرداد 1401 </a>
-                          </li>
-                       </ul>
-                       <h5> ارائه آخرین راهکارها برای موفقیت یک امر خیرخواهانه </h5>
-                       <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای. </p>
-                       <a href="/admin/blogDetails" class="btn read-more-bn text-uppercase"> ادامه مطلب </a>
-                    </div>
-                </div>
+           <% for( let index = 0; index <= 5 ; index++ ) { %>
+            <div class="col" data-aos="fade-right">
+              <div class="comon-news-part">
+                  <div class="comon-pic-news">
+                      <figure class="position-relative">
+                        <a href="#"> <img src="images/pexels-photo-5673488.jpeg" alt="picb"/> </a>
+                      </figure>
+                      
+                  </div>
+                  <div class="dtails-idv-text">
+                     <ul class="list-unstyled d-flex">
+                        <li>
+                          <a href="#"> <i class="fa fa-user-alt"></i> ناشر </a>
+                        </li>
+                        <li>
+                          <a href="#"> <i class="fas fa-calendar-week"></i> 20 خرداد 1401 </a>
+                        </li>
+                     </ul>
+                     <h5> ارائه آخرین راهکارها برای موفقیت یک امر خیرخواهانه </h5>
+                     <p> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای. </p>
+                     <a href="/blogDetails" class="btn read-more-bn text-uppercase"> ادامه مطلب </a>
+                  </div>
               </div>
-              <div class="col" data-aos="fade-right">
+            </div>
+           <% } %>
+            
+              <!-- <div class="col" data-aos="fade-right">
                 <div class="comon-news-part">
                     <div class="comon-pic-news">
                         <figure class="position-relative">
@@ -119,7 +122,7 @@
                        <a href="blog-details.html" class="btn read-more-bn text-uppercase"> ادامه مطلب </a>
                     </div>
                 </div>
-              </div>
+              </div> -->
           </div>
       </div>
   

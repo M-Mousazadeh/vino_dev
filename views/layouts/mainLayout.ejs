@@ -7,6 +7,12 @@
     <title><%= pageTitle  %> </title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link href='./css/css.gg.css' rel='stylesheet'>
+
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -30,10 +36,7 @@
     <link rel="stylesheet" href="/css/rtl.css">
   </head>
 
-<body>
-  <% if(path !== '/404'){ %>
-    <%- include('../includes/loading.ejs') %> 
-  <% } %>  
+<body> 
   <!-- comon header  -->
   <% if(path !== '/404' && path !== '/login' && path !== '/register'){ %> 
   <%- include('../includes/header.ejs')  %> 
