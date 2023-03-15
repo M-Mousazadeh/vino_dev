@@ -1,14 +1,13 @@
-const {Router} = require('express');
+const { Router } = require('express');
 
 const router = new Router()
 
-// @desc career datails page
-// @desc /careerDetails GET
-router.get('/careerDetails', (req, res)=>{
-    res.render('career-details',{
-        pageTitle : 'وینو تیم | اطلاعات کسب و کار',
-        path : '/careerDetails',
-        text : 'اطلاعات کسب و کار'
+router.get('/careerDetails', (req, res) => {
+    res.render('career-details', {
+        pageTitle: `${req.query.id} | وینو تیم`,
+        path: '/careerDetails',
+        text: req.query.id,
+        session: req.session.user
     })
 })
 
