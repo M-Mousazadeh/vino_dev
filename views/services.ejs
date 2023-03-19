@@ -1,159 +1,56 @@
+<section class="total-body mobile-comon-animation overflow-hidden mt-5 pt-3 d-block">
+    <div class="pricing-page comon-services-pge">
 
- <section class="total-body mobile-comon-animation overflow-hidden mt-5 pt-3 d-block">
-   <div class="pricing-page comon-services-pge">
+        <div class="container">
+            <h6 class="text-center" data-aos="fade-up">لیست بروز ترین سرویس ها</h6>
+            <h2 class="text-center" data-aos="fade-down"> سرویس ها </h2>
+            <div style=" display: flex;width: 70%; flex-wrap: wrap; justify-content: center;  color: brown; margin-top: 5%; margin: auto;">
+                <p style="margin-top:3%;">
+                    مشتری گرامی ، شما میتوانید از طریق سرویس های زیر به خدمات و پکیج های ما دسترسی داشته باشید .
+                </p>
+                <p style="margin-top:3%; color: brown;">
+                    در صورت نبود سرویس دلخواه خود در لیست زیر ، شما میتوانید با توجه به نیاز خود با ما تماس بگیرید و سفارش دلخواه خود را ثبت کنید .
+                </p>
+            </div>
 
-      <div class="container">
-          <h6 class="text-center"  data-aos="fade-up">قیمت ها</h6>
-          <h2 class="text-center"  data-aos="fade-down">قیمت خدمات </h2>
-        <div class="row w-100 mx-auto my-5 text-center align-content-center justify-content-between">
-          <div class="column "  data-aos="fade-left">
-            <div class="pricing-card basic">
-              <div class="pricing-header">
-                <span class="plan-title">طرح پایه</span>
-                <div class="price-circle">
-                  <span class="price-title">
-                    <span>69500</span>
-                  </span>
-                  <span class="info">/ ماهانه</span>
-                </div>
-              </div>
-              <div class="badge-box">
-                <span>تخفیف  35%</span>
-              </div>
-              <ul>
-                <li>
-                  <strong>1</strong> دامنه
-                </li>
-                <li>
-                  <strong>10 گیگابایت </strong> فضای ذخیره سازی
-                </li>
-                <li>
-                  <strong>50 گیگابایت</strong> پهنای باند
-                </li>
-                <li>
-                  <strong>رایگان : 1</strong> دامنه
-                </li>
-                <li>
-                  <strong>1 اکانت</strong> اف تی پی
-                </li>
-              </ul>
-              <div class="buy-button-box">
-                <a href="#" class="buy-now">خرید پلن</a>
-              </div>        
+            <div class="row w-100 mx-auto my-5 text-center align-content-center justify-content-between">
+                <% Data.forEach(element => {  console.log(element)%>
+                    <div class="column " data-aos="fade-right">
+                        <div class="pricing-card <%=element.colorMode %>">
+                            <% if(element.star){%>
+                                <div class="popular">محبوب</div>
+                                <% } %>
+                                    <div class="pricing-header">
+                                        <span class="plan-title"><%= element.name %></span>
+                                        <div class="price-circle">
+                                            <span class="price-title">
+                                                    <span><%= new Intl.NumberFormat().format( element.price) %> </span>
+                                            </span>
+                                            <span class="info"> تومان</span>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="badge-box">
+                                <span>تخفیف  35%</span>
+                            </div> -->
+                                    <ul>
+                                        <li>
+                                            <br/>
+                                        </li>
+                                        <% element.components.forEach(com => { %>
+                                            <li>
+                                                <%= com %>
+                                            </li>
+                                            <% }) %>
+                                    </ul>
+                                    <div class="buy-button-box">
+                                        <a href="/product-details/?_id=<%= element._id %>" class="buy-now">خرید پلن</a>
+                                    </div>
+                        </div>
+                    </div>
+                    <% }) %>
             </div>
-          </div>
-          <div class="column"  data-aos="fade-up">
-            <div class="pricing-card eco">
-              <div class="pricing-header">
-                <span class="plan-title">پلن اقتصادی</span>
-                <div class="price-circle">
-                  <span class="price-title">
-                    <span>169500</span>
-                  </span>
-                  <span class="info">/ ماهانه</span>
-                </div>
-              </div>
-              <div class="badge-box">
-                <span>تخفیف  15%</span>
-              </div>
-              <ul>
-                <li>
-                  <strong>5</strong> دامنه
-                </li>
-                <li>
-                  <strong>50 گیگابایت </strong> فضای ذخیره سازی
-                </li>
-                <li>
-                  <strong>250 گیگابایت</strong> پهنای باند
-                </li>
-                <li>
-                  <strong>رایگان : 2 </strong> دامنه
-                </li>
-                <li>
-                  <strong>اکانت اف تی پی</strong> نامحدود
-                </li>
-              </ul>
-              <div class="buy-button-box">
-                <a href="#" class="buy-now">خرید پلن</a>
-              </div>
-            </div>
-          </div>
-          <div class="column"  data-aos="fade-down">
-            <div class="pricing-card pro">
-              <div class="popular">محبوب</div>
-              <div class="pricing-header">
-                <span class="plan-title">پلن پیشرفته</span>
-                <div class="price-circle">
-                  <span class="price-title">
-                    <span>239500</span>
-                  </span>
-                  <span class="info">/ ماهانه</span>
-                </div>
-              </div>
-              <div class="badge-box">
-                <span>تخفیف  8%</span>
-              </div>
-              <ul>
-                <li>
-                  <strong>10</strong> دامنه
-                </li>
-                <li>
-                  <strong>100 گیگابایت </strong> فضای ذخیره سازی
-                </li>
-                <li>
-                  <strong>پهنای باند</strong> نامحدود
-                </li>
-                <li>
-                  <strong>رایگان : 3</strong> دامنه
-                </li>
-                <li>
-                  <strong>اکانت اف تی پی</strong> نامحدود
-                </li>
-              </ul>
-              <div class="buy-button-box">
-                <a href="#" class="buy-now">خرید پلن</a>
-              </div>
-            </div>
-          </div>
-          <div class="column"  data-aos="fade-right">
-            <div class="pricing-card business">
-              <div class="pricing-header">
-                <span class="plan-title">پلن تجاری</span>
-                <div class="price-circle">
-                  <span class="price-title">
-                    <span>599500</span>
-                  </span>
-                  <span class="info">/ ماهانه</span>
-                </div>
-              </div>
-              <div class="badge-box">
-                <span>تخفیف 5%</span>
-              </div>
-              <ul>
-                <li>
-                  <strong>نامحدود </strong> دامنه
-                </li>
-                <li>
-                  <strong>250 گیگابایت </strong> فضای ذخیره سازی
-                </li>
-                <li>
-                  <strong>نامحدود</strong> پهنای باند
-                </li>
-                <li>
-                  <strong>رایگان : 5</strong> دامنه
-                </li>
-                <li>
-                  <strong>نامحدود </strong> اکانت اف تی پی
-                </li>
-              </ul>
-              <div class="buy-button-box">
-                <a href="#" class="buy-now">خرید پلن</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-          
-   </div>
 
-  </section>
+    </div>
+
+</section>

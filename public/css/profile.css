@@ -13,8 +13,35 @@ body>.c-container {
     display: flex;
 }
 
+.menu-btn {
+    width: 40px;
+    display: none;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    background-color: var(--secondary);
+    font-size: 2em;
+    position: fixed;
+    border-radius: 0px 0 0 5px;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media screen and (max-width: 1232px) {
+    .menu-btn {
+        display: flex;
+    }
+}
+
 .menu {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 100%;
     background: rgb(189, 24, 155);
     background: linear-gradient( 150deg, rgba(189, 24, 155, 1) 0%, rgba(59, 5, 151, 1) 100%);
@@ -23,13 +50,23 @@ body>.c-container {
     align-items: center;
     overflow-y: auto;
     padding-bottom: 10px;
+    z-index: 10;
+    transition: right 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media screen and (max-width: 1232px) {
+    .menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+    }
 }
 
 .menu>.profile-image {
     width: 150px;
     min-height: 150px;
     max-height: 200px;
-    background-color: red;
+    background-color: white;
     overflow: hidden;
     border-radius: 100px;
     border: 2px solid white;
@@ -53,10 +90,6 @@ body>.c-container {
     transition: 0.2s width;
 }
 
-.menu>.username:hover img {
-    width: 15px;
-}
-
 .menu>.username>img {
     margin-right: 5px;
 }
@@ -66,7 +99,7 @@ body>.c-container {
 }
 
 .menu>.bottom {
-    width: calc(100% - 200px);
+    padding: 10px;
 }
 
 .menu>.bottom>.tabs {
@@ -95,7 +128,7 @@ body>.c-container {
 }
 
 .menu>.bottom>.tabs>.tab:hover::after {
-    width: 160px;
+    width: calc(100% - 40px);
 }
 
 .menu>.bottom>.tabs>.tab::after {
@@ -103,10 +136,10 @@ body>.c-container {
     width: 0px;
     height: 75px;
     position: absolute;
-    right: -10px;
+    left: -10px;
     top: 0;
     bottom: 0;
-    transform: rotate(-20deg);
+    transform: rotate(20deg);
     border-radius: 20px;
     background-color: var(--secondary);
     z-index: 10px;
@@ -114,7 +147,7 @@ body>.c-container {
 }
 
 .menu>.bottom>.tabs>.tab[data-focus="true"]::after {
-    width: 160px;
+    width: calc(100% - 40px);
 }
 
 .menu>.bottom>.tabs>.tab[data-focus="true"]>.title {
@@ -144,10 +177,16 @@ body>.c-container {
 .content {
     width: 100%;
     display: flex;
-    padding: 100px;
+    padding: 50px 100px;
     align-items: center;
     justify-content: center;
     flex: 1;
+}
+
+@media screen and (max-width: 780px) {
+    .content {
+        padding: 50px 20px;
+    }
 }
 
 .content>.into {
@@ -167,18 +206,44 @@ body>.c-container {
     width: 100%;
     top: 0;
     bottom: 0;
-    left: -100%;
+    left: -150%;
     transition: left 0.4s;
 }
 
 .content>.into>.setting {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: right;
-    padding: 50px 50px;
+    padding: 50px 80px;
+}
+
+.content>.into>.setting>form {
+    width: 100%;
+    max-width: 530px;
+}
+
+@media screen and (max-width: 510px) {
+    .content>.into>.setting {
+        padding: 40px 30px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .content>.into>.setting {
+        padding: 40px 18px;
+    }
 }
 
 .content>.into>.focus {
     left: 0%;
 }
+
+
+/* !basket */
+
+.content>.into>.basket {}
 
 .content>.into>.basket>.into {
     width: 100%;
@@ -209,7 +274,7 @@ body>.c-container {
 }
 
 .content>.into>.basket>.into>.item>.image {
-    width: 120px;
+    min-width: 100px;
     height: 100%;
     /* margin-left: auto; */
 }
@@ -221,18 +286,43 @@ body>.c-container {
 }
 
 .content>.into>.basket>.into>.item>.left {
+    display: flex;
+    height: 100%;
+    width: calc(100% - 100px);
+    flex-wrap: wrap;
+    flex-direction: column;
     margin-right: 10px;
 }
 
 .content>.into>.basket>.into>.item>.left>.title {
+    max-width: 98%;
+    /* height: max-content; */
+    margin-left: 10px;
     font-size: 1.8em;
     direction: rtl;
     /* background-color: red; */
     padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 530px) {
+    .content>.into>.basket>.into>.item>.left>.title {
+        font-size: 1.2em;
+    }
+    .content>.into>.basket>.into>.item>.left>.description {
+        width: calc(100% - 20px) !important;
+        margin-top: 5px;
+    }
 }
 
 .content>.into>.basket>.into>.item>.left>.description {
-    width: 90%;
+    width: calc(100% - 100px);
+    overflow: hidden;
+    direction: rtl;
+    text-align: right;
     margin-left: auto;
     font-size: 1em;
     direction: rtl;
@@ -240,6 +330,12 @@ body>.c-container {
     padding-left: 10px;
     opacity: 0.5;
     transition: opacity 0.8s;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* start showing ellipsis when 3rd line is reached */
+    white-space: pre-wrap;
 }
 
 .content>.into>.basket>.into>.item:hover>.left>.description {
@@ -263,6 +359,13 @@ body>.c-container {
     border-radius: 20px;
 }
 
+@media screen and (max-width: 530px) {
+    .content>.into>.basket>.into>.item>.unpaid,
+    .content>.into>.basket>.into>.item>.paid {
+        transform: scale(0.8) translateX(-15px);
+    }
+}
+
 .content>.into>.basket>.into>.item>.unpaid {
     /* width: 130px; */
     position: absolute;
@@ -280,11 +383,32 @@ body>.c-container {
     border-radius: 20px;
 }
 
+.content>.into>.basket>.into>.item>.canceled {
+    /* width: 130px; */
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 3px;
+    border: 1px solid rgb(193, 0, 0);
+    background-color: rgb(188, 5, 5);
+    border-radius: 20px;
+}
+
 .content>.into>.basket>.into>.item[data-paid="1"]>.paid {
     display: flex;
 }
 
 .content>.into>.basket>.into>.item[data-paid="0"]>.unpaid {
+    display: flex;
+}
+
+.content>.into>.basket>.into>.item[data-paid="2"]>.canceled {
     display: flex;
 }
 
@@ -294,7 +418,11 @@ body>.c-container {
     color: var(--secondary);
 }
 
+.content>.into>.logout>.into>.btns {
+    width: 100%;
+}
+
 .content>.into>.logout>.into>.btns>.btn {
-    width: 150px;
+    width: 50% !important;
     margin: 10px !important;
 }

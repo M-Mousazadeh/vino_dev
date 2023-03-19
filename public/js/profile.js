@@ -1,4 +1,4 @@
-(function () {
+(function() {
     const $ = document;
     const menuBtn = $.querySelector(".menu-btn");
     const menu = $.querySelector(".menu");
@@ -38,11 +38,13 @@
         item.addEventListener("click", () => {
             const pageName = item.getAttribute("data-target");
             showSelectedPage(pageName);
-            if (window.innerWidth < "1232") menu.style.display = "none";
+            if (window.innerWidth < "1232") menu.style.right = "-100%";
         });
     }
 
     menuBtn.addEventListener("click", e => {
-        menu.style.display = menu.style.display === "none" ? "flex" : "none";
+        console.log(menu.style.right);
+        // menu.style.right = 0;
+        menu.style.right = menu.style.right === "0px" ? "-100%" : "0";
     });
 })();

@@ -1,42 +1,41 @@
-<% let array = [{id : '' , name :'' , mainTitle:'' , prph01:'' ,
- prph02 : '' , images01 : '', images02 :'' , userOpinions : [{nameUser :"" , message:""}] , 
- tag : 'app' , url : "/careerDetails/?id= name "}] %>
+<!-- /careerDetails/?id= -->
+<section class="total-body mobile-comon-animation mt-5 pt-3 d-block">
+    <div class="projects-page comon-services-pge">
+
+        <div class="container">
+            <h6 class="text-center" data-aos="fade-up">نمونه کار ها</h6>
+            <h2 class="text-center mb-4" data-aos="fade-down">لیست آخرین نمونه کارها</h2>
+            <div class="project-menu" data-aos="fade-up">
 
 
-
-    <section class="total-body mobile-comon-animation mt-5 pt-3 d-block">
-        <div class="projects-page comon-services-pge">
-
-            <div class="container">
-                <h6 class="text-center" data-aos="fade-up">نمونه کار ها</h6>
-                <h2 class="text-center mb-4" data-aos="fade-down">لیست آخرین نمونه کارها</h2>
-                <div class="project-menu" data-aos="fade-up">
-
-
-                    <ul class="filter-list list-unstyled">
-                        <li data-filter="all" class="active">همه</li>
-                        <li data-filter=".ecommerce"> توسعه وبسایت </li>
-                        <li data-filter=".game"> توسعه بازی </li>
-                        <li data-filter=".graphic"> طرح های گرافیکی</li>
-                        <li data-filter=".app"> توسعه اپلیکیشن </li>
-                    </ul>
+                <ul class="filter-list list-unstyled">
+                    <li data-filter="all" class="active">همه</li>
+                    <li data-filter=".ecommerce"> توسعه وبسایت </li>
+                    <li data-filter=".game"> توسعه بازی </li>
+                    <li data-filter=".graphic"> طرح های گرافیکی</li>
+                    <li data-filter=".app"> توسعه اپلیکیشن </li>
+                </ul>
 
 
-                </div>
-                <div class="row row-cols-1 row-cols-sm-2 gx-lg-5 my-5 row-cols-lg-3 gallery ">
-
-                    <% array.forEach(element => {%>
-                        <div class="col mix <%= element.tag %> all">
-                            <a href=<%=element.url %> class="comon-projets">
-                                <figure>
-                                    <img src="images/62dd189f4015cb48e616253af5376fa5.jpg" alt="ps1" />
-                                </figure>
-                            </a>
-                        </div>
-                        <% }) %>
-                </div>
             </div>
-
+            <div class="row row-cols-1 row-cols-sm-2 gx-lg-5 my-5 row-cols-lg-3 gallery ">
+                <% array.forEach(element => {%>
+                    <div class="col mix <%= element.category %> all">
+                        <a href="/careerDetails/?_id=<%=element._id%>&title=<%=element.title%>&titleimage=<%=element.titleimage%> 
+                            &header=<%=element.title%>&imagebody=<%=element.imagebody%>  &description_1=<%=element.description_1%> 
+                            &description_2=<%=element.description_2%>" class="comon-projets">
+                            <figure>
+                                <h5 style="margin-bottom: 5%; margin-right: 15%; ">
+                                    <%=element.title%>
+                                </h5>
+                                <img src="images/<%=element.titleimage%> " alt="ps1" />
+                            </figure>
+                        </a>
+                    </div>
+                    <% }) %>
+            </div>
         </div>
 
-    </section>
+    </div>
+
+</section>

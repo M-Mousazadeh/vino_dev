@@ -1,3 +1,112 @@
-.container{
-    
+:root {
+    --primary: #bd189b;
+    --secondary: #3b0597;
+}
+
+.c-container {
+    display: flex;
+}
+
+.c-container>.into {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.c-container>.into>.left {
+    width: 300px;
+    height: fit-content;
+    /* background-color: gray; */
+}
+
+.c-container>.into>.left>.top {
+    display: flex;
+    height: 40px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.c-container>.into>.left>.bottom {
+    min-height: 200px;
+    margin: 4px 0 0 0;
+    border-color: rgb(186, 186, 186) !important;
+}
+
+.c-container>.into>.right {
+    width: 700px;
+    /* background-color: aquamarine; */
+}
+
+.c-container>.into>.right>.title {
+    height: 40px;
+    direction: rtl;
+    font-size: 1.7em;
+}
+
+.c-container>.into>.right>.slider {
+    /* width: 400px; */
+    height: 350px;
+    position: relative;
+    border-radius: 5px;
+    background-color: red;
+    overflow: hidden;
+}
+
+.c-container>.into>.right>.slider>img {
+    width: 100%;
+    height: 100%;
+}
+
+.c-container>.into>.right>.slider>.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    transition: all 0.2s;
+    background-color: hsla(286, 100%, 86%, 0.624);
+}
+
+.c-container>.into>.right>.slider:hover>.next {
+    transform: translateY(-50%) translateX(0);
+}
+
+.c-container>.into>.right>.slider:hover>.prev {
+    transform: translateY(-50%) translateX(0);
+}
+
+.c-container>.into>.right>.slider>.nav:hover {
+    background-color: var(--secondary);
+    color: white;
+    cursor: pointer;
+}
+
+.c-container>.into>.right>.slider>.next {
+    transform: translateY(-50%) translateX(100%);
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.c-container>.into>.right>.slider>.prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+    transform: translateY(-50%) translateX(-100%);
+}
+
+
+/* * description */
+
+.c-container>.into>.right>.description {
+    direction: rtl;
+    text-align: justify;
+    margin-top: 60px;
+    font: 1em;
+    color: #000;
+}
+
+
+/* *table of content */
+
+.c-container>.into>.right>.table-of-content {
+    margin-top: 50px;
+    direction: rtl;
 }

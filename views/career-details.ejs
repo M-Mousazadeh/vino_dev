@@ -1,55 +1,39 @@
-<body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en">
-    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="256" data-image-height="256" id="sec-93af">
+<body>
+    <section class="u-align-center  u-section-1" style="background-image: url('/images/<%=data.titleimage %>' )">
         <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-            <h1 class="u-text u-text-default u-title u-text-1">نمونه کار 1</h1>
-            <p class="u-large-text u-text u-text-default u-text-variant u-text-2">Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
-            <a href="Home.html#carousel_f872" class="u-btn u-button-style u-palette-2-base u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-direction="">Read More</a>
+            <h2 class="u-text u-text-default u-title u-text-1" style="color:cornflowerblue; text-shadow: 5px 5px 7px #000000;">
+                <%= data.title %>
+            </h2>
         </div>
     </section>
-    <section class="u-align-center u-clearfix u-section-2" id="carousel_f872">
+    <section class="u-align-center u-clearfix u-section-2">
         <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
             <div class="u-custom-color-1 u-expanded-width u-shape u-shape-rectangle u-shape-1"></div>
             <div class="u-align-center-xs u-container-style u-product u-product-1">
                 <div class="u-container-layout u-valign-bottom u-container-layout-1">
                     <!--product_image-->
-                    <img src="/images/rfg-min.jpg" alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-1">
+                    <img src="/images/<%= data.imagebody %>" alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-1">
                     <!--/product_image-->
                     <div class="u-align-center u-container-style u-expanded-width-xs u-group u-shape-rectangle u-white u-group-1">
                         <div class="u-container-layout u-valign-bottom u-container-layout-2">
                             <!--product_title-->
                             <h2 class="u-product-control u-text u-text-default u-text-1">
                                 <a class="u-product-title-link" href="#">
-                                    <!--product_title_content-->Sample Product
-                                    <!--/product_title_content-->
+                                    <!--product_title_content-->
+                                    <%= data.description_1%>
+                                        <!--/product_title_content-->
                                 </a>
                             </h2>
-                            <!--/product_title-->
-                            <!--product_price-->
-                            <div class="u-product-control u-product-price u-product-price-1">
-                                <div class="u-price-wrapper u-spacing-10">
-                                    <!--product_old_price-->
-                                    <div class="u-hide-price u-old-price" style="text-decoration: line-through !important;" wfd-invisible="true">
-                                        <!--product_old_price_content-->$12
-                                        <!--/product_old_price_content-->
-                                    </div>
-                                    <!--/product_old_price-->
-                                    <!--product_regular_price-->
-                                    <div class="u-price" style="font-size: 1.875rem; font-weight: 700;">
-                                        <!--product_regular_price_content-->$9.95
-                                        <!--/product_regular_price_content-->
-                                    </div>
-                                    <!--/product_regular_price-->
-                                </div>
-                            </div>
-                            <!--/product_price-->
-                            <!--product_content-->
                             <div class="u-product-control u-product-desc u-text u-text-default u-text-2">
                                 <!--product_content_content-->
-                                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+                                <p>
+                                    <%= data.description_1%>
+                                </p>
                                 <!--/product_content_content-->
                             </div>
                             <!--/product_content-->
-                            <p class="u-align-center u-text u-text-default u-text-3">Sample text. Click to select the Text Element.oidjfsidjisdjnvisdjoisdfaspijdfpoajsdpofjsap'ofjdpoasjdopjasp'od<br>dspfkapdspakfpdskfskdpfkdpkfpakdpfkpsdkfpdkfpdkfpksdfsf<br>pdkfpasdkfffffffpkpskdpfsdpkfpsdkfpdkpfdspfkpdkfpsdkfsf<br>pdkfpsdkfpskdfpskdpfkspdkfpskdfpskdpfksdpfksdpf
+                            <p class="u-align-center u-text u-text-default u-text-3">
+                                <%= data.description_2 %>
                             </p>
                         </div>
                     </div>
@@ -59,80 +43,55 @@
             <!--/product-->
         </div>
     </section>
-    <section class="u-align-center u-clearfix u-grey-5 u-section-3" id="sec-b355">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <h1 class="u-text u-text-default u-text-1">ارسال دیدگاه و نظر خود</h1>
-            <div class="u-form u-form-1">
-                <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
-                    <div class="u-form-group u-form-name u-label-top">
-                        <label for="name-3b9a" class="u-label">Name</label>
-                        <input type="text" placeholder="Enter your Name" id="name-3b9a" name="name" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="">
-                    </div>
-                    <div class="u-form-email u-form-group u-label-top">
-                        <label for="email-3b9a" class="u-label">Email</label>
-                        <input type="email" placeholder="Enter a valid email address" id="email-3b9a" name="email" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2" required="">
-                    </div>
-                    <div class="u-form-group u-form-message u-label-top">
-                        <label for="message-3b9a" class="u-label">Message</label>
-                        <textarea placeholder="Enter your message" rows="4" cols="50" id="message-3b9a" name="message" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3" required=""></textarea>
-                    </div>
-                    <div class="u-align-center u-form-group u-form-submit u-label-top">
-                        <label class="u-form-control-hidden u-label u-label-4"></label>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                        <div class="u-btn-submit-container">
-                            <a href="google.com" class="u-border-2 u-border-black u-btn u-btn-rectangle u-btn-submit u-button-style u-none u-btn-1">Submit</a>
-                        </div>
-                    </div>
-                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-                    <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-                    <input type="hidden" value="" name="recaptchaResponse">
-                    <input type="hidden" name="formServices" value="5746c1afef79c1c508edbd1ab7394c4e">
-                </form>
-            </div>
-        </div>
-    </section>
-    <section class="u-clearfix u-section-4" id="carousel_b630">
-        <div class="u-clearfix u-sheet u-sheet-1">
-            <h2 class="u-align-left u-text u-text-default-lg u-text-default-xl u-text-1">&nbsp;: نظرات کاربران&nbsp;</h2>
-            <p class="u-align-center u-text u-text-default u-text-2"> These core values define who we are and the work we do.</p>
-            <div class="u-list u-list-1">
-                <div class="u-repeater u-repeater-1">
-                    <div class="u-border-2 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-container-layout-1">
-                            <h4 class="u-text u-text-3"> We’re genuine and compassionate.</h4>
-                            <p class="u-text u-text-4"> Being in the people business can mean difficult decisions and tough conversations. We believe in going into every meeting with a desire and ability to be genuine and compassionate. We are all people, and people make mistakes.
-                                We’re here to help you fix those, without risk or judgment, and move forward.</p>
-                        </div>
-                    </div>
-                    <div class="u-border-2 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-container-layout-2">
-                            <h4 class="u-text u-text-5"> Honesty, integrity, and accountability.</h4>
-                            <p class="u-text u-text-6"> Tempus egestas sed sed risus pretium quam vulputate dignissim. Ipsum consequat nisl vel pretium lectus quam id leo in. In pellentesque massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper velit sed
-                                ullamcorper. Etiam sit amet nisl purus in mollis.</p>
-                        </div>
-                    </div>
-                    <div class="u-border-2 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-container-layout-3">
-                            <h4 class="u-text u-text-7"> Passion for our clients. </h4>
-                            <p class="u-text u-text-8"> Tempus egestas sed sed risus pretium quam vulputate dignissim. Ipsum consequat nisl vel pretium lectus quam id leo in. In pellentesque massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper velit sed
-                                ullamcorper. Etiam sit amet nisl purus in mollis.</p>
-                        </div>
-                    </div>
-                    <div class="u-border-2 u-border-grey-15 u-border-no-bottom u-border-no-left u-border-no-right u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-container-layout-4">
-                            <h4 class="u-text u-text-9"> Drive for results, with unparalleled service. </h4>
-                            <p class="u-text u-text-10"> Tempus egestas sed sed risus pretium quam vulputate dignissim. Ipsum consequat nisl vel pretium lectus quam id leo in. In pellentesque massa placerat duis ultricies lacus. Sed lectus vestibulum mattis ullamcorper velit sed
-                                ullamcorper. Etiam sit amet nisl purus in mollis.</p>
-                        </div>
-                    </div>
+    <div class="leave-sec-part" style="width:50%; margin-right: 25%;">
+        <h2> ثبت نظر </h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="نام خود را وارد کنید" />
                 </div>
             </div>
-            <a href="#" class="u-active-black u-align-center u-border-1 u-border-active-black u-border-grey-50 u-border-hover-black u-btn u-btn-round u-button-style u-hover-black u-none u-radius-50 u-btn-1">read more</a>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="ایمیل خود را وارد کنید" />
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="متن پیام خود را وارد کنید"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <input type="submit" class="btn subimt-comment" value="ارسال نظر" />
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+    <div class="comment-sec-part" style="width:50%; margin-right: 25%;">
+        <h2> نظرات</h2>
+        <%  data.userOpinions.forEach(element => { %>
+            <div class="comon-com-div">
+                <div class="d-lg-flex justify-content-between">
+                    <figure>
+                        <img src="/images/profile-avatar.svg" alt="user-pic" />
+                    </figure>
+                    <div class="comment-text">
+                        <div class="d-flex align-items-center">
+                            <h5 class="mb-0">
+                                <%= element.nameUser %>
+                            </h5> <span class="d-inline me-3"> 12 خرداد 1401 </span>
+                        </div>
+
+                        <p>
+                            <%= element.message %>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
 
 
-
+            <% }) %>
+    </div>
 </body>
-
-</html>
