@@ -7,10 +7,11 @@ const serviceSchema = mongoose.Schema({
     star: Boolean,
     colorMode: String,
     price: Number,
+    status: String,
     description: String,
     category: String,
     components: Array,
     userOpinions: [Object]
 })
 
-exports.model = mongoose.model('Service', serviceSchema);
+exports.modelService = mongoose.model('Service', serviceSchema);

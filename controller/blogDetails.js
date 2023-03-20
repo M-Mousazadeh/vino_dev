@@ -20,3 +20,17 @@ exports.index = async(req, res) => {
         categories: cates
     })
 }
+
+exports.save = async(req, res) => {
+    let { _id } = req.query
+        //let infoService = await model.findOne({ _id });
+    let form = req.body
+    let today = new Date().toLocaleDateString('fa-IR');
+    form["time"] = today
+
+    let save = await model.updateOne({ _id: _id }, { $push: { userOpinions: form } })
+    console.log(save)
+    if (save) {
+        res.redirect("/blogDetails/?_id=" + _id)
+    }
+}

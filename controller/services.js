@@ -1,7 +1,7 @@
-const { model } = require('../model/Services');
+const { modelService } = require('../model/Services');
 
 exports.index = async(req, res) => {
-    let datas = await model.find()
+    let datas = await modelService.find()
 
     res.render('services', {
         pageTitle: 'وینو تیم | خدمات',

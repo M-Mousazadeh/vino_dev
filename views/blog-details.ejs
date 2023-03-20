@@ -33,29 +33,31 @@
                                 <%= Data.description %>
                             </p>
                         </div>
-                        <div class="leave-sec-part" margin-right: 25%;>
+                        <div class="leave-sec-part" style="width:90%;">
                             <h2> ثبت نظر </h2>
-                            <div class="row ">
-                                <div class="col-lg-6 ">
-                                    <div class="form-group ">
-                                        <input type="text " class="form-control " placeholder="نام خود را وارد کنید " />
+                            <div class="row">
+                                <form action="/blogDetails/?_id=<%= Data._id %>" method="post">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="نام خود را وارد کنید" name="nameUser" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 ">
-                                    <div class="form-group ">
-                                        <input type="text " class="form-control " placeholder="ایمیل خود را وارد کنید " />
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="ایمیل خود را وارد کنید" name="email" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-12 ">
-                                    <div class="form-group ">
-                                        <textarea class="form-control " placeholder="متن پیام خود را وارد کنید "></textarea>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="متن پیام خود را وارد کنید" name="message"></textarea>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-12 ">
-                                    <div class="form-group ">
-                                        <input type="submit " class="btn subimt-comment " value="ارسال نظر " />
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input type="submit" class="btn subimt-comment" value="ارسال نظر" />
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                         <div class="comment-sec-part " margin-right: 25%;>
@@ -70,7 +72,7 @@
                                             <div class="d-flex align-items-center ">
                                                 <h5 class="mb-0 ">
                                                     <%= element.nameUser %>
-                                                </h5> <span class="d-inline me-3 "> 12 خرداد 1401 </span>
+                                                </h5> <span class="d-inline me-3 "><%=element.time%></span>
                                             </div>
 
                                             <p>
@@ -89,7 +91,7 @@
                             <ul class="list-unstyled mt-4 ">
                                 <% categories.forEach(element => { %>
                                     <li>
-                                        <a href="# "> <i class="fas fa-caret-left "></i>
+                                        <a href="/blog "> <i class="fas fa-caret-left "></i>
                                             <%= element.name%>
                                         </a>
                                     </li>

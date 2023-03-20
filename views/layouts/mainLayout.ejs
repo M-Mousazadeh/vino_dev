@@ -52,16 +52,16 @@
 
 <body>
     <!-- comon header  -->
-    <% if(path !== '/404' && path !== '/login' && path !== '/register'){ %>
+    <% if(path !== '/404' && path !== '/login' && path !== '/register'&& path !== '/reset'){ %>
         <%- include('../includes/header.ejs')  %>
             <% } %>
                 <!-- comon header ends  -->
-                <% if(path !== '/' && path !== '/404' && path !== '/login' && path !== '/register'){ %>
+                <% if(path !== '/' && path !== '/404' && path !== '/login' && path !== '/register'&& path !== '/reset'){ %>
                     <%- include('../includes/banner.ejs')  %>
                         <% } %>
                             <%- body %>
 
-                                <% if(path !== '/404' && path !== '/login' && path !== '/register'){ %>
+                                <% if(path !== '/404' && path !== '/login' && path !== '/register'&& path !== '/reset'){ %>
                                     <%- include('../includes/footer.ejs')  %>
                                         <%- include('../includes/modal.ejs')  %>
                                             <%- include('../includes/responsive.ejs')  %>

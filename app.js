@@ -56,6 +56,7 @@ app.use(require('./router/contact'));
 app.use(require('./router/projects'));
 app.use(require('./router/services'));
 app.use('/account', require('./router/login'));
+app.use('/account', require('./router/reset'));
 app.use('/dashboard', require('./router/dashboard'));
 
 

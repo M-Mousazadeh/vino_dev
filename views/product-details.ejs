@@ -1,5 +1,7 @@
 <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode">
+
     <section>
+
         <main class="container2">
 
             <!-- Left Column / Headphones Image -->
@@ -20,38 +22,38 @@
                         <%= Data.description %>
                     </p>
                 </div>
+                <%- include('./includes/messages/validationMessages.ejs')  %>
+                    <!-- Product Configuration -->
+                    <div class="product-configuration">
 
-                <!-- Product Configuration -->
-                <div class="product-configuration">
+                        <!-- Product Color -->
+                        <div class="product-color">
+                            <span>دسته بندی</span>
+                            <div class="color-choose">
+                                <p style="color: gray;">
+                                    #
+                                    <%= Data.category %>
+                                </p>
+                            </div>
+                        </div>
 
-                    <!-- Product Color -->
-                    <div class="product-color">
-                        <span>دسته بندی</span>
-                        <div class="color-choose">
-                            <p style="color: gray;">
-                                #
-                                <%= Data.category %>
-                            </p>
+                        <!-- Cable Configuration -->
+                        <div class="cable-config">
+                            <span>اجزا اصلی این سرویس</span>
+                            <div class="cable-choose">
+                                <% Data.components.forEach(element => { %>
+                                    <button><%= element %></button>
+                                    <% }) %>
+                            </div>
+                            <p style="font-size: x-small; color: brown;">! در صورت لغو هرکدام از اجزا ، پس از ثبت سفارش با پشتیبانی تماس حاصل فرمایید !</p>
                         </div>
                     </div>
 
-                    <!-- Cable Configuration -->
-                    <div class="cable-config">
-                        <span>اجزا اصلی این سرویس</span>
-                        <div class="cable-choose">
-                            <% Data.components.forEach(element => { %>
-                                <button><%= element %></button>
-                                <% }) %>
-                        </div>
-                        <p style="font-size: x-small; color: brown;">! در صورت لغو هرکدام از اجزا ، پس از ثبت سفارش با پشتیبانی تماس حاصل فرمایید !</p>
+                    <!-- Product Pricing -->
+                    <div class="product-price">
+                        <span><%= new Intl.NumberFormat().format( Data.price) %> تومان</span>
+                        <a href="/product-pay/?_id=<%= Data._id %>" class="cart-btn">ثبت سفارش</a>
                     </div>
-                </div>
-
-                <!-- Product Pricing -->
-                <div class="product-price">
-                    <span><%= new Intl.NumberFormat().format( Data.price) %> تومان</span>
-                    <a href="#" class="cart-btn">ثبت سفارش</a>
-                </div>
             </div>
         </main>
     </section>
@@ -61,26 +63,28 @@
     <div class="leave-sec-part" style="width:50%; margin-right: 25%;">
         <h2> ثبت نظر </h2>
         <div class="row">
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="نام خود را وارد کنید" />
+            <form action="/product-details/?_id=<%= Data._id %>" method="post">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="نام خود را وارد کنید" name="nameUser" />
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ایمیل خود را وارد کنید" />
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="ایمیل خود را وارد کنید" name="email" />
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="form-group">
-                    <textarea class="form-control" placeholder="متن پیام خود را وارد کنید"></textarea>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="متن پیام خود را وارد کنید" name="message"></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="form-group">
-                    <input type="submit" class="btn subimt-comment" value="ارسال نظر" />
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input type="submit" class="btn subimt-comment" value="ارسال نظر" />
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <div class="comment-sec-part" style="width:50%; margin-right: 25%;">

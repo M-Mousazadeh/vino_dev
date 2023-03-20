@@ -7,7 +7,7 @@
         <div class="username">
             <img src="/assets/icons/edit.svg" alt="edit icon" class="edit-name-btn">
             <div class="txt">
-                mehrab
+
             </div>
         </div>
         <div class="bottom">
@@ -28,60 +28,66 @@
         <div class="into">
             <div class="page basket focus" data-name="basket">
                 <div class="into">
-                    <a class="item" data-paid="2">
-                        <div class="image">
-                            <img src="/assets/imgs/html-5-concept.jpg" alt="product image">
-                        </div>
-                        <div class="left">
-                            <div class="title">مایکروسافت ابزار ضبط صفحه‌نمایش را به ویندوز ۱۱ اضافه می‌کند </div>
-                            <div class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
-                                ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم</div>
-                        </div>
-                        <div class="paid">
-                            <div class="m-1">
-                                پرداخت شده
+                    <% orders.forEach(element => { %>
+                        <a href="/product-details/?_id=<%=element._id%>" class="item" data-paid=<%=element.status %>>
+                            <div class="image">
+                                <img src="/images/<%= element.media %>" alt="product image">
                             </div>
-                            <i class="gg-check-o icon"></i>
-                        </div>
-                        <div class="unpaid">
-                            <div class="m-1">
-                                در انتظار پرداخت
+                            <div class="left">
+                                <div class="title">
+                                    <%=  element.name%>
+                                </div>
+                                <div class="description">
+                                    <%=  element.description %>
+                                </div>
                             </div>
-                            <i class="gg-loadbar-alt icon"></i>
-                        </div>
-                        <div class="canceled">
-                            <div class="m-1">
-                                لغو شده
+                            <div class="paid">
+                                <div class="m-1">
+                                    پرداخت شده
+                                </div>
+                                <i class="gg-check-o icon"></i>
                             </div>
-                            <i class="gg-exit-o icon"></i>
-                        </div>
-                    </a>
+                            <div class="unpaid">
+                                <div class="m-1">
+                                    در انتظار پرداخت
+                                </div>
+                                <i class="gg-loadbar-alt icon"></i>
+                            </div>
+                            <div class="canceled">
+                                <div class="m-1">
+                                    لغو شده
+                                </div>
+                                <i class="gg-exit-o icon"></i>
+                            </div>
+                        </a>
+                        <% }) %>
+
                 </div>
             </div>
             <div class="page setting" data-name="setting">
 
                 <img src="/assets/icons/setting.svg" alt="setting icon" width="100px" height="100px">
-                <form action="#" onclick="return false" class="">
+                <form action="/account/profile" method="post" class="">
                     <div class="mb-3">
                         <label for="inputFullName" class="form-label d-flex justify-content-end">ایمیل<i
                                 class="gg-mail  m-1"></i></label>
-                        <input type="text" class="form-control" id="inputEmail">
+                        <input type="email" class="form-control" id="inputEmail" name="email" disabled value=<%=user.email %> >
                     </div>
                     <div class="mb-3">
                         <label for="inputPhonenumber" class="form-label d-flex justify-content-end">تلفن همراه<i
                                 class="gg-smartphone m-1"></i></label>
-                        <input type="number" class="form-control" id="inputPhonenumber">
+                        <input type="number" class="form-control" id="inputPhonenumber" name="phonenumber" value=<%=user.phoneNumber %> >
                     </div>
                     <div class="mb-3">
                         <label for="inputEmail" class="form-label d-flex justify-content-end">نام و نام خانوادگی<i
                                 class="gg-rename m-1"></i></label>
-                        <input type="email" class="form-control" id="inputFullName">
+                        <input type="text" class="form-control" id="inputFullName" name="name" value=<%=user.name %>>
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="inputPassword" class="form-label d-flex justify-content-end">رمز عبور<i
                                 class="gg-password m-1"></i></label>
                         <input type="password" class="form-control" id="inputPassword">
-                    </div>
+                    </div> -->
                     <button type="submit" class="btn btn-primary w-100">تایید</button>
                 </form>
             </div>
@@ -91,7 +97,7 @@
                         آیا میخواهید از حساب کاربری خود خارج شوید؟
                     </div>
                     <div class="btns d-flex">
-                        <a href="#" class="btn btn-outline-primary m-0 ">بله</a>
+                        <a href="/account/logout" class="btn btn-outline-primary m-0 ">بله</a>
                         <a href="#" class="btn btn-outline-danger m-0">خیر</a>
                     </div>
                 </div>

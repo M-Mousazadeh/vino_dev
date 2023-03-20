@@ -17,7 +17,7 @@ exports.login = (req, res) => {
         text: '',
     })
 }
-exports.checkUser = async (req, res) => {
+exports.checkUser = async(req, res) => {
     const errors = [];
     try {
         const { email, password } = req.body
@@ -26,10 +26,11 @@ exports.checkUser = async (req, res) => {
             let pass = user.password;
             let end = await bcrypt.compare(password, pass)
             if (end) {
-                let session = req.session;   
-                session.user = true                
+                let session = req.session;
+                session.user = true
+                session._id = user._id
                 res.redirect('/')
-            }else{
+            } else {
                 errors.push({ message: "رمز عبور اشتباه میباشد" })
                 return res.render('login', {
                     pageTitle: 'وینو تیم | ورود',
@@ -46,9 +47,8 @@ exports.checkUser = async (req, res) => {
             text: '',
             errors
         })
-    }
-    catch (err) {
-      console.log(err)
+    } catch (err) {
+        console.log(err)
         res.render('login', {
             pageTitle: 'وینو تیم | ورود',
             path: '/login',
@@ -63,7 +63,7 @@ exports.checkUser = async (req, res) => {
         text: '',
     })
 }
-exports.createUser = async (req, res) => {
+exports.createUser = async(req, res) => {
     const errors = [];
     try {
         console.log(await model.userValidation(req.body))
@@ -116,32 +116,35 @@ exports.forgot = (req, res) => {
         text: ''
     })
 }
-exports.sendLink = async (req, res) => {
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.email',
-        port: 587,
-        secure: false,
-        service: 'gmail',
-        auth: {
-            user: process.env.SMTP_User,
-            pass: process.env.SMTP_Pass
-        }
-    });
+exports.sendLink = async(req, res) => {
+    let email = req.body.email
+    const user = await model.findOne({ email });
+    let getId = user._id.toHexString()
+        // const transporter = nodemailer.createTransport({
+        //     host: 'smtp.gmail.email',
+        //     port: 587,
+        //     secure: false,
+        //     service: 'gmail',
+        //     auth: {
+        //         user: process.env.SMTP_User,
+        //         pass: process.env.SMTP_Pass
+        //     }
+        // });
 
-    await transporter.sendMail({
-        from: '"Vino Devs" <vinodevs.official@gmail.com>', // sender address
-        to: req.body.email,
-        subject: "Your reset link", // Subject line
-        text: `in order to change your password click on the link below\n http://localhost:8080/account/forgot/${req.body.email}`, // plain text body
-        //html: `<a href=localhost:8080/account/forgot/${req.body.email} style= "border: 1px solid #888; background-color : #444; color : #eee; padding: 10px;">تغییر کلمه عبور</a>`, // html body
-    }).catch(err => {
-        console.log(err);
-    })
-    res.redirect('/')
+    // await transporter.sendMail({
+    //     from: '"Vino Devs" <vinodevs.official@gmail.com>', // sender address
+    //     to: req.body.email,
+    //     subject: "Your reset link", // Subject line
+    //     text: `in order to change your password click on the link below\n http://localhost:8080/account/forgot/${req.body.email}`, // plain text body
+    //     //html: `<a href=localhost:8080/account/forgot/${req.body.email} style= "border: 1px solid #888; background-color : #444; color : #eee; padding: 10px;">تغییر کلمه عبور</a>`, // html body
+    // }).catch(err => {
+    //     console.log(err);
+    // })
+    res.redirect('/account/reset/?_id=' + getId)
 }
-exports.logout = (req , res)=>{
-// logout system
-let session = req.session;   
-session.user = false;
-res.redirect('/')
+exports.logout = (req, res) => {
+    // logout system
+    let session = req.session;
+    session.user = false;
+    res.redirect('/')
 }

@@ -4,9 +4,25 @@
         <div class="container">
             <h6 class="text-center cm-sub" data-aos="fade-down"> اخبار و مقالات </h6>
             <h2 class="text-center" data-aos="fade-up"> بلاگ های ما</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-md-3 gx-lg-4">
+
+            <div class="project-menu" data-aos="fade-up">
+                <div class="category-div ">
+                    <h2> دسته بندی ها </h2>
+                    <div class="project-menu" data-aos="fade-up">
+                        <ul class="filter-list list-unstyled">
+                            <li data-filter="all" class="active">همه</li>
+                            <% Categories.forEach(element => { %>
+                                <li data-filter=".<%= element.tag %>">
+                                    <%= element.name%>
+                                </li>
+                                <% }) %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 gx-lg-5 my-5 row-cols-lg-3 gallery">
                 <% Data.forEach(element => { %>
-                    <div class="col" data-aos="fade-right">
+                    <div class="col mix <%= element.category %> all" data-aos="fade-right">
                         <div class="comon-news-part">
                             <div class="comon-pic-news">
                                 <figure class="position-relative">
